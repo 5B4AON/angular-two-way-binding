@@ -1,0 +1,22 @@
+<p>
+    Testing two way binding for an object hierarchy using ngFor<br/>
+    Just modify the chapter content and press submit.<br/>
+    The bookshelf object is displayed in the developer console.
+</p>
+
+<div *ngFor="let book of bookshelf.content">
+    <h2>{{book.title}}</h2>
+    <hr/>
+    <div *ngFor="let chapter of book.content">
+        {{chapter.title}}
+        <p>
+            <input type="text" [(ngModel)]="chapter.content">
+        </p>
+    </div>
+    <br/>
+</div>
+
+<p>
+    <button (click)="submit()">Submit</button>
+</p>
+
