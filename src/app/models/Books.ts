@@ -5,8 +5,8 @@ export class Chapter {
     content: string;
 
     constructor() {
-        this.title = 'New Chapter';
-        this.content = 'No content yet...';
+        this.title = '';
+        this.content = '';
     }
 
 }
@@ -17,7 +17,7 @@ export class Book {
     content: Set<Chapter>;
 
     constructor() {
-        this.title = 'New Book';
+        this.title = '';
         this.content = new Set();
     }
 

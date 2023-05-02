@@ -1,16 +1,14 @@
 <div *ngFor="let book of bookshelf.content">
     <button (click)="removeBook(book)">x</button>&nbsp;
-    <input class="BookTitle" [(ngModel)]="book.title">
+    <input class="BookTitle" [(ngModel)]="book.title" placeholder="Set Book Title" (change)="notify()">
     <hr />
     <div *ngFor="let chapter of book.content">
         <button (click)="removeChapter(book, chapter)">x</button>&nbsp;
-        <input class="ChapterTitle" [(ngModel)]="chapter.title">
+        <input class="ChapterTitle" [(ngModel)]="chapter.title" placeholder="Set Chapter Title" (change)="notify()">
         <br>
-        <textarea class="Content" [(ngModel)]="chapter.content"></textarea>
+        <textarea class="Content" [(ngModel)]="chapter.content" placeholder="Set Chapter Content" (change)="notify()"></textarea>
     </div>
     <button (click)="addChapter(book)">+</button>
     <br><br>
 </div>
 <br>
-<button (click)="addBook()">Add Book</button>
-<button (click)="notify()">Update</button>

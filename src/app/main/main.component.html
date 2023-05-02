@@ -1,2 +1,3 @@
-<app-bookshelf [(bookshelf)]="bookshelf" (bookshelfChange)="changed()"></app-bookshelf>
+<app-bookshelf name="bs" [(bookshelf)]="bookshelf" (bookshelfChange)="changed()"></app-bookshelf>
+<button (click)="addBook()">Add New Book</button>
 <pre [innerHTML]="output" class=json-container></pre>

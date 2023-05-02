@@ -29,10 +29,6 @@ export class BookshelfComponent {
     this.bookshelfChange.emit(this.bookshelf);
   }
 
-  ngOnInit() {
-    this.notify();
-  }
-
   addBook() {
     this.bookshelf.content.add(new Book());
     this.notify();

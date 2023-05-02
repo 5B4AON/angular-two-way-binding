@@ -2,6 +2,7 @@
 .ChapterTitle,
 .Content {
     border: 0;
+    width: 400px;
 }
 
 .ChapterTitle {
