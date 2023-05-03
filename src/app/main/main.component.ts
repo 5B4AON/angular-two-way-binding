@@ -11,7 +11,7 @@ import { BookshelfComponent } from '../bookshelf/bookshelf.component';
 })
 export class MainComponent {
 
-  @ViewChild(BookshelfComponent) child!:BookshelfComponent;
+  @ViewChild('bs1') child!:BookshelfComponent; // Accessing ViewChild using template variable #bs1
   bookshelf: Bookshelf = new Bookshelf();
   output!: string;
 
